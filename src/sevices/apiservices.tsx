@@ -11,7 +11,7 @@ export const fetchCleanData = async (): Promise<CleanPlanet[]> => {
     const data = await response.json();
 
     const cleanData: CleanPlanet[] = data.bodies
-      .filter((planet: any) => planet.isPlanet)
+     
       .map((planet: any) => ({
         id: planet.id,
         name: planet.englishName,
